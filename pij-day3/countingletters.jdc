@@ -1,0 +1,14 @@
+print ("Please enter some text: ");
+String str = System.console().readLine();
+print ("Please enter a character to count: ");
+String letterToCount = System.console().readLine();
+char letter = letterToCount.charAt(0);
+int count = 0;
+int letterCount = 0;
+while (count < str.length()){
+	if (str.charAt(count) == (letter)){;
+		letterCount++;
+	}
+count++;
+}
+println (letter + " appears " + letterCount + " times in your text.");

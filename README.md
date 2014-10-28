@@ -1,2 +1,2 @@
-my-currency-exchange
+My solutions for class exercises
 ====================

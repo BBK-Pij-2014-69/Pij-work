@@ -1,0 +1,11 @@
+int base = Integer.parseInt(System.console().readLine());
+int exponent = Integer.parseInt(System.console().readLine());
+int r = pow(base,exponent);
+println (r);
+int pow(int base,int exponent){
+	if (exponent == 0){
+		return base;
+	}else{
+		return pow(base,exponent-1);
+	}
+}

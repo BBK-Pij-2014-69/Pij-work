@@ -1,0 +1,32 @@
+print ("Please enter a mathematical operation: ");
+String str = System.console().readLine();
+int length = str.length();
+int operator = 1;
+if (str.indexOf('/')!=-1){
+	operator = str.indexOf('/');
+} else if (str.indexOf('*')!=-1){
+	operator = str.indexOf('*');
+} else if (str.indexOf('-')!=-1){
+	operator = str.indexOf('-');
+} else if (str.indexOf('+')!=-1){
+	operator = str.indexOf('+');
+}
+String substr = str.substring(0,operator);
+double firstNum = Double.parseDouble(substr);
+substr = str.substring(operator+1,length);
+double seconedNum = Double.parseDouble(substr);
+char sign = str.charAt(operator);
+double total;
+if (sign=='/'){
+	total = (firstNum / seconedNum);
+	println (total);
+}else if (sign=='*'){
+	total = (firstNum * seconedNum);
+	println (total);
+}else if (sign=='-'){
+	total = (firstNum - seconedNum);
+	println (total);
+}else if (sign=='+'){
+	total = (firstNum + seconedNum);
+	println (total);
+}

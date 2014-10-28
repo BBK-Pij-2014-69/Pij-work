@@ -1,0 +1,17 @@
+int i = 1;
+while (i < 1001) {
+int n = i;
+boolean finished = false;
+while (!finished){
+	if (n > 2) {
+		n = (n - 1);
+		if ((i % n) == 0) {
+		finished = true;
+		}
+	} else {
+		println (i);
+		finished = true;
+	}
+}
+i = i + 1;
+}

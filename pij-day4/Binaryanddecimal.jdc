@@ -1,0 +1,37 @@
+println ("select d for decimal2binary conversion");
+print ("or b for binary2decimal conversion: ");
+String temp = System.console().readLine();
+if (temp.equals("b")){
+	print ("please enter a binary number: ");
+	String bin = System.console().readLine();
+	double decimal = binary2decimal(bin);
+	println (decimal);
+}else if (temp.equals("d")){
+	print ("please enter a decimal number: ");
+	double decimal = Integer.parseInt(System.console().readLine());
+	String binary = decimal2binary(decimal);
+	println (binary);
+}
+double binary2decimal(String bin){
+	double decimal = 0;
+	for (int count = 0; count < bin.length(); count++){
+		int temp = Integer.parseInt(bin.substring(count,count+1));
+		if (temp == 1){
+			decimal = decimal + Math.pow(2,((bin.length()-1)-count));
+		}
+	}
+	return decimal;
+}
+static String decimal2binary(double dec){
+	String binary = ("");
+	while (dec > 0){
+		if (dec % 2 == 0){
+			binary = ("0" + binary);
+			dec= dec/2;
+		}else{
+			binary = ("1" + binary);
+			dec = (dec-1)/2;
+		}
+	}
+	return binary;
+}

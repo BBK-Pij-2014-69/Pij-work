@@ -1,0 +1,43 @@
+print ("Please enter a number: ");
+String str = System.console().readLine();
+int inputNum = Integer.parseInt(str);
+int count = inputNum + 1;
+int n = count;
+int firstPrime = 0;
+int seconedPrime = 0;
+boolean finished = false;
+while (!finished){
+	if (n > 2) {
+		n = (n - 1);
+		if ((count % n) == 0) {
+			count = count + 1;
+			n = count;
+		}
+	} else {
+		firstPrime = count;
+		finished = true;
+	}
+}
+count = inputNum - 1;
+n = count;
+finished = false;
+while (!finished){
+	if (n > 2) {
+		n = (n - 1);
+		if ((count % n) == 0) {
+			count = count -1;
+			n = count;
+		}
+	} else {
+		seconedPrime = count;
+		finished = true;
+	}
+}
+if ((firstPrime - inputNum) > (inputNum - seconedPrime)) {
+	println (firstPrime);
+} else if ((firstPrime - inputNum) < (inputNum - seconedPrime)) {
+	println (seconedPrime);
+} else {
+	println (firstPrime);
+	println (seconedPrime);
+}

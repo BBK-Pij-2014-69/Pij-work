@@ -1,0 +1,33 @@
+print ("Please enter the total cost: ");
+double cost = Double.parseDouble(System.console().readLine());
+print ("Please enter amount paid: ");
+double amountPaid = Double.parseDouble(System.console().readLine());
+double changeOwed = (amountPaid - cost);
+double remainder = changeOwed;
+int fiftyPound = 0;
+int twentyPound = 0;
+int tenPound = 0;
+int fivePound = 0;
+int twoPound = 0;
+int onePound = 0;
+int fiftyPence = 0;
+int twentyPence = 0;
+int tenPence = 0;
+int fivePence = 0;
+int twoPence = 0;
+int onePence = 0;
+while (remainder > 50.0){
+	remainder = (remainder - 50.0);
+	fiftyPound ++;
+}
+while (remainder > 20.0){
+	remainder = (remainder - 20.0);
+	twentyPound ++;
+}
+while (remainder > 10.0){
+	remainder = (remainder - 10.0);
+	tenPound ++;
+}
+
+
+

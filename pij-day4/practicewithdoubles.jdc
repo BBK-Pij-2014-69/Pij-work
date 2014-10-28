@@ -1,0 +1,16 @@
+print ("Please enter amount total amount borrowed: ");
+double cost = Double.parseDouble(System.console().readLine());
+print ("Please enter the number of years to pay it back: ");
+double years = Double.parseDouble(System.console().readLine());
+print ("Please enter the interest rate: ");
+double interest = Double.parseDouble(System.console().readLine());
+mortgagecalc(cost, years, interest);
+void mortgagecalc(double cost, double years, double interest){
+	double interestone = ((interest/100) * cost);
+	double totalCost = (interestone + cost);
+	double perYear = (totalCost/years);
+	double interestPaid = (interestone/perYear);
+	println ("The total amount to be paid is: £" + totalCost);
+	println ("The money to be paid every year is: £" + perYear);
+	println ("The number of years before the interest is paid off is: " + interestPaid + " years");
+}

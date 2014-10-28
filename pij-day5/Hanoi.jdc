@@ -1,0 +1,11 @@
+long n = Integer.parseInt(System.console().readLine());
+long r = hanoiDiscs(n);
+println (r);
+long hanoiDiscs(long n){
+	if (n == 1){
+		return 1;
+	}else{
+		 long result = (((hanoiDiscs(n-1)*2)+1));
+		 return result;
+	 }
+ }

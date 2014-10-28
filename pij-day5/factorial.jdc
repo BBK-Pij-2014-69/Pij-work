@@ -1,0 +1,18 @@
+int n = Integer.parseInt(System.console().readLine());
+int a = Factorial(n);
+println (a);
+int Factorial(int n){
+	if (n==1){
+		return 1;
+	}else{
+		int result = (n * Factorial(n-1));
+		return result;
+	}
+}
+//int count = 1;
+//int result = 1;
+//while (count < n){
+//	count++;
+//	result = result * count;
+//}
+//println (result);

@@ -1,0 +1,13 @@
+print ("Please enter some text: ");
+String str = System.console().readLine();
+int count = 0;
+int previousCount = 0;
+while (count < str.length()){
+	if (str.charAt(count) == (' ')){;
+		println (str.substring(previousCount,count));
+		previousCount = (count + 1);
+	}else if (count == (str.length()-1)){
+		println (str.substring(previousCount));
+	}
+count++;
+}
