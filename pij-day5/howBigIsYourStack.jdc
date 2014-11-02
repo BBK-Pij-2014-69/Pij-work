@@ -1,0 +1,6 @@
+int a = 1;
+int n = overflow(a);
+int overflow(int a){
+	println (a);
+	return overflow(a+1);
+}
