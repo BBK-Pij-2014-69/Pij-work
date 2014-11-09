@@ -1,0 +1,6 @@
+Calculator calc = new Calculator();
+calc.add(2,3);
+calc.subtract(3,2);
+calc.multiply(2,3);
+calc.divide(3,2);
+calc.modulus(3,2);
